@@ -15,24 +15,22 @@ const Modal = (props: any) => {
           <div className="w-full h-full flex flex-col">
             <div className="w-full p-3 bg-green-600 text-white font-medium text-2xl tracking-wide flex justify-between items-center">
               {props.title}
-              <i
-                className="fa-solid fa-square-xmark text-[2rem] cursor-pointer
-                "
-                onClick={props.handleClose}
-              ></i>
             </div>
             {props.children}
-            <div className="flex gap-5 justify-end">
-            <button className="py-2 px-5 bg-green-500 text-white ">Submit</button>
-            <button className="py-2 px-5 font-bold" onClick={props.onClose}>Close</button>
+            <div className="flex gap-5 justify-end p-3">
+              <button
+                className="py-2 px-5 bg-green-500 text-white"
+                onSubmit={props.onSubmit}
+              >
+                Submit
+              </button>
+              <button className="py-2 px-5 font-bold" onClick={props.onClose}>
+                Close
+              </button>
+            </div>
           </div>
-          </div>
-         
         </div>
-        
       </div>
-      
-      
     </div>
   );
 };
